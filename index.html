@@ -1,0 +1,748 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Al-badr Company</title>
+    <link rel="stylesheet" href="css/all.min.css">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/normalize.css">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <!-- Google Font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="">
+    <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@200..1000&amp;display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- Navbar -->
+    <nav class="flex justify-between items-center py-4 px-8 bg-white shadow-md">
+            <!-- Logo -->
+            <div class="flex items-center">
+                <img src="images/Logo Al Badr 4.png" alt="Logo" class="w-16">
+            </div>
+    
+            <!-- Links -->
+            <ul class="flex space-x-6 text-lg font-semibold text-[#1A2A58] relative items-center">
+                <li><a href="#" class="text-[#FFC72C]">Home</a></li>
+    
+                <!-- Dropdown Container -->
+                <li class="relative">
+                    <button id="dropdownButton" class="flex items-center space-x-1 duration-200 hover:text-yellow-500">
+                        <span>Service</span>
+                        <i class="fa-solid fa-chevron-down text-sm"></i>
+                    </button>
+    
+                    <!-- Dropdown Menu --> 
+                    <div id="dropdownMenu" class="absolute left-0 top-10 w-[800px] bg-white shadow-lg p-6 rounded-lg mt-6  hidden z-10">
+                        <!-- Column 1 -->
+                        <div class="w-1/2 p-4 space-y-6">
+                            <div class="flex items-center space-x-3 justify-between cursor-pointer">
+                                <h3 class="font-bold text-lg text-transform: capitalize">import</h3>
+                                <i class="fa-solid fa-tools text-[#1A2A58] text-xl "></i>
+                            </div>
+                            <p class="text-gray-600 text-sm">Professional interior and exterior painting services</p>
+    
+                            <div class="flex items-center space-x-3 justify-between cursor-pointer">
+                                <h3 class="font-bold text-lg text-transform: capitalize">Commercial</h3>
+                                <i class="fa-solid fa-building text-[#1A2A58] text-xl"></i>
+                            </div>
+                            <p class="text-gray-600 text-sm">Innovative architectural solutions for modern </p>
+    
+                            <div class="flex items-center space-x-3 justify-between cursor-pointer">
+                                <h3 class="font-bold text-lg text-transform: capitalize">Contractors</h3>
+                                <i class="fa-solid fa-hammer text-[#1A2A58] text-xl"></i>
+                            </div>
+                            <p class="text-gray-600 text-sm">Complete home and office renovation services.</p>
+                        </div>
+    
+                        <!-- Column 2 -->
+                        <div class="w-1/2 p-4 space-y-6"> 
+                            <div class="flex items-center space-x-3 justify-between cursor-pointer">
+                                <h3 class="font-bold text-lg text-transform: capitalize">Manufacturing</h3>
+                                <i class="fa-solid fa-paint-roller text-[#1A2A58] text-xl"></i>
+                            </div>
+                            <p class="text-gray-600 text-sm">Professional interior and exterior painting services.</p>
+    
+                            <div class="flex items-center space-x-3 justify-between cursor-pointer">
+                                <h3 class="font-bold text-lg text-transform: capitalize">Sales</h3>
+                                <i class="fa-solid fa-ruler-combined text-[#1A2A58] text-xl"></i>
+                            </div>
+                            <p class="text-gray-600 text-sm">Creative and stylish interior design solutions.</p>
+    
+                            <div class="flex items-center space-x-3 justify-between cursor-pointer">
+                                <h3 class="font-bold text-lg text-transform: capitalize">To Implement</h3>
+                                <i class="fa-solid fa-truck text-[#1A2A58] text-xl"></i>
+                            </div>
+                            <p class="text-gray-600 text-sm">Reliable transportation and logistics services.</p>
+                        </div>
+                    </div>
+                </li>
+    
+                <li><a href="projects.html" class="duration-200 hover:text-yellow-500">Projects</a></li>
+                <li><a href="about.html" class="duration-200 hover:text-yellow-500">About Us</a></li> 
+                <button href="#" class="duration-200 bg-[#1A2A58] text-white px-5 py-2 rounded-lg shadow-md hover:bg-yellow-500">
+                    Contact Us
+                </button>
+            </ul>
+
+             <!-- JavaScript for Toggle -->
+            <script>
+            document.getElementById("dropdownButton").addEventListener("click", function() {
+              let menu = document.getElementById("dropdownMenu");
+              if (menu.classList.contains("hidden")) {
+                menu.classList.remove("hidden");
+                menu.classList.add("flex");
+              } else {
+                menu.classList.remove("flex");
+                menu.classList.add("hidden");
+              }
+            });
+    
+            // إغلاق القائمة عند النقر خارجها
+            document.addEventListener("click", function(event) {
+                var dropdownMenu = document.getElementById("dropdownMenu");
+                if (!dropdownMenu.contains(event.target) && !document.getElementById("dropdownButton").contains(event.target)) {
+                    dropdownMenu.classList.add("hidden");
+                }
+            });
+            </script>
+    
+            <!-- Right Section -->
+            <div class="flex items-center space-x-6 relative">
+
+                <!-- Social Media Icons -->
+                <div class="flex text-xl gap-1 space-x-3 text-[#1A2A58]">
+                    <a href="#"><i class="fa-brands fa-whatsapp duration-200 hover:text-green-500 rounded-sm "></i></a>
+                    <a href="#"><i class="fa-brands fa-facebook-f duration-200 hover:text-blue-500 rounded-sm "></i></a>
+                    <a href="#"><i class="fa-brands fa-youtube duration-200 hover:text-red-500 rounded-sm "></i></a>
+                    <a href="#"><i class="fa-brands fa-instagram duration-200 hover:text-orange-500 rounded-sm "></i></a>
+                    <a href="#"><i class="fa-brands fa-twitter duration-200 hover:text-blue-500 rounded-sm "></i></a>
+                    <a href="#"><i class="fa-brands fa-linkedin-in duration-200 hover:text-blue-500 rounded-sm "></i></a>
+                </div>
+                <!-- Language Dropdown -->
+                <div class="relative">
+                    <button id="langButton" class="flex items-center space-x-2 border px-4 py-2 rounded-lg bg-white shadow-md">
+                        <img id="currentLangFlag" src="flags/usa.png.png" alt="Language" class="w-5 h-5">
+                        <span id="currentLangText">English</span>
+                        <i class="fa-solid fa-chevron-down text-sm"></i>
+                    </button>
+    
+                    <!-- Language Menu -->
+                    <div id="langMenu" class="absolute left-0 mt-2 w-[160px] bg-white shadow-lg rounded-lg hidden z-10">
+                        <ul>
+                            <li class="flex items-center space-x-2 px-4 py-2 cursor-pointer duration-200 hover:bg-gray-200" onclick="changeLanguage('Arabic', 'flags/egypt.png.png')">
+                                <img src="flags/egypt.png.png" alt="Arabic" class="w-5 h-5">
+                                <span>Arabic</span>
+                            </li>
+                            <li class="flex items-center space-x-2 px-4 py-2 cursor-pointer duration-200 hover:bg-gray-200" onclick="changeLanguage('Chinese', 'flags/china.png.png')">
+                                <img src="flags/china.png.png" alt="Chinese" class="w-5 h-5">
+                                <span>Chinese</span>
+                            </li>
+                            <li class="flex items-center space-x-2 px-4 py-2 cursor-pointer duration-200 hover:bg-gray-200" onclick="changeLanguage('English', 'flags/usa.png.png')">
+                                <img src="flags/usa.png.png" alt="English" class="w-5 h-5">
+                                <span>English</span>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+    
+            </div>
+
+             <!-- JavaScript for Dropdown -->
+             <script>
+            // Toggle language dropdown
+            document.getElementById("langButton").addEventListener("click", function(event) {
+                event.stopPropagation(); // منع إغلاق القائمة عند الضغط على الزر
+                document.getElementById("langMenu").classList.toggle("hidden");
+            });
+    
+            // تغيير اللغة عند الضغط على أي خيار
+            function changeLanguage(lang, flag) {
+                document.getElementById("currentLangText").innerText = lang;
+                document.getElementById("currentLangFlag").src = flag;
+                document.getElementById("langMenu").classList.add("hidden");
+            }
+    
+            // إغلاق القائمة عند النقر خارجها
+            document.addEventListener("click", function(event) {
+                var langMenu = document.getElementById("langMenu");
+                if (!langMenu.contains(event.target) && !document.getElementById("langButton").contains(event.target)) {
+                    langMenu.classList.add("hidden");
+                }
+            });
+            </script>
+
+    </nav>
+
+
+    <!-- Banner Section -->
+    <section id="hero-section" class="opacity-0 translate-y-10 transition-all duration-1000   mx-auto flex flex-col md:flex-row items-center justify-between py-16 px-8">
+         <!-- Left Content -->
+        <div class="md:w-1/2 text-center items-center">
+        <h1 class="text-6xl font-bold text-[#1A2A58]">
+            Elbadr <span class="text-[#FFC72C]">It Means</span> Trust
+        </h1>
+        <h2 class="text-4xl  font-semibold text-[#1A2A58] mt-6">
+            We Make Quality
+        </h2>
+        <p class="text-gray-500 mt-6 leading-relaxed">
+            Al-Badr Suspended Ceilings Company has the results of years of experience in the field at all levels
+            in implementing projects and manufacturing all sectors. It has many individuals, which makes the company 
+            around you wherever you are, due to the ease of finding what you need.
+        </p>
+        <button class="mt-6 px-6 py-3 bg-[#1A2A58] text-white font-semibold rounded-full shadow-md hover:bg-[#F3C623] transition">
+            Request The Service Now
+        </button>
+        </div>
+
+        <!-- Animation For Text -->
+        <script>
+            document.addEventListener("DOMContentLoaded", () => {
+                const heroSection = document.getElementById("hero-section");
+                setTimeout(() => {
+                    heroSection.classList.remove("opacity-0", "translate-y-10");
+                }, 500);
+            });
+        </script>
+
+        <!-- Right Image -->
+        <div class="md:w-1/2 mt-8 md:mt-0 flex justify-end">
+            <img src="images/Hero Banner.jpg" alt="Worker" class="rounded-2xl shadow-lg w-full md:w-[700px] floating-image"> <!-- Animation -->
+        </div>
+    </section>
+
+
+    <!-- Expiriance -->
+    <section class="expiriance  mx-auto py-16 px-8 mt-10">
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+            <!-- Card 1 -->
+            <div class="bg-white p-6 rounded-2xl shadow-lg border">
+                <h2 class="flex justify-center items-center text-xl font-semibold text-white p-1 rounded-md  bg-[#11285B]">10 Years experience</h2>
+                <p class="text-gray-500 text-sm mt-4">Our company is distinguished by its extensive experience in the field. We have many large projects that we have implemented as implementation only</p>
+                <hr class="my-4 border-gray-300">
+                <div class="flex justify-between items-center">
+                    <h3 class="text-lg font-medium text-gray-700">Details</h3>
+                    <span class="text-[#1A2A58] text-3xl">&#8594;</span>
+                </div>
+            </div>
+    
+            <!-- Card 2 -->
+            <div class="bg-white p-6 rounded-2xl shadow-lg border">
+                <h2 class="flex justify-center items-center text-xl font-semibold text-white p-1 rounded-md  bg-[#11285B]">Trained staff</h2>
+                <p class="text-gray-500 text-sm mt-4">Our company is distinguished by its extensive experience in the field. We have many large projects that we have implemented as implementation only</p>
+                <hr class="my-4 border-gray-300">
+                <div class="flex justify-between items-center">
+                    <h3 class="text-lg font-medium text-gray-700">Details</h3>
+                    <span class="text-[#1A2A58] text-3xl">&#8594;</span>
+                </div>
+            </div>
+    
+            <!-- Card 3 -->
+            <div class="bg-white p-6 rounded-2xl shadow-lg border">
+                <h2 class="flex justify-center items-center text-xl font-semibold text-white p-1 rounded-md  bg-[#11285B]">manufacturing</h2>
+                <p class="text-gray-500 text-sm mt-4">Our company is distinguished by its extensive experience in the field. We have many large projects that we have implemented as implementation only</p>
+                <hr class="my-4 border-gray-300">
+                <div class="flex justify-between items-center">
+                    <h3 class="text-lg font-medium text-gray-700">Details</h3>
+                    <span class="text-[#1A2A58] text-3xl">&#8594;</span>
+                </div>
+            </div>
+    
+            <!-- Card 4 -->
+            <div class="bg-white p-6 rounded-2xl shadow-lg border">
+                <h2 class="flex justify-center items-center text-xl font-semibold text-white p-1 rounded-md  bg-[#11285B]">Stores and sales</h2>
+                <p class="text-gray-500 text-sm mt-4">Our company is distinguished by its extensive experience in the field. We have many large projects that we have implemented as implementation only</p>
+                <hr class="my-4 border-gray-300">
+                <div class="flex justify-between items-center">
+                    <h3 class="text-lg font-medium text-gray-700">Details</h3>
+                    <span class="text-[#1A2A58] text-3xl">&#8594;</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Services Section -->
+    <section class=" mx-auto py-16 px-8 mt-10 relative bg-gray-50">
+        <h2 class="text-4xl font-bold text-center text-[#11285B] mb-10">Our Services</h2>
+    
+        <div class="relative overflow-hidden">
+            <div class="flex transition-transform duration-500 ease-in-out " id="slider">
+                <!-- كرت 1 -->
+                <div class="w-1/4 min-w-[25%] bg-white px-6 py-12 m-1 rounded-lg shadow-md transition-transform hover:scale-95">
+                    <h3 class="text-2xl font-semibold text-center text-[#11285B] mb-4">Import</h3>
+                    <p class="text-center text-gray-500 mb-4">Lorem ipsum dolor sit amet consectetur adipisicing elit. Odit harum hic veniam eligendi minima Lorem ipsum dolor sit amet consectetur adipisicing elit. Odit harum hic veniam eligendi minima</p>
+                    <div class="flex justify-center">
+                        <button class="px-3 py-2 mb-4 bg-[#1A2A58] text-white rounded-md shadow-md hover:bg-[#F3C623] transition">Learn More</button>
+                    </div>
+                    <img src="images/Service-2.jpg" alt="Import" class="rounded-xl ">
+                </div>
+
+                <!-- كرت 2 -->
+                <div class="w-1/4 min-w-[25%] bg-white px-6 py-12 m-1 rounded-lg shadow-md transition-transform hover:scale-95">
+                    <h3 class="text-2xl font-semibold text-center text-[#11285B] mb-4">Manufactruring</h3>
+                    <p class="text-center text-gray-500 mb-4">Lorem ipsum dolor sit amet consectetur adipisicing elit. Odit harum hic veniam eligendi minima Lorem ipsum dolor sit amet consectetur adipisicing elit. Odit harum hic veniam eligendi minima</p>
+                    <div class="flex justify-center">
+                        <button class="px-3 py-2 mb-4 bg-[#1A2A58] text-white rounded-md shadow-md hover:bg-[#F3C623] transition">Learn More</button>
+                    </div>
+                    <img src="images/service-3.jpg" alt="Import" class="rounded-xl ">
+                </div>
+
+                <!-- كرت 3 -->
+                <div class="w-1/4 min-w-[25%] bg-white px-6 py-12 m-1 rounded-lg shadow-md transition-transform hover:scale-95">
+                    <h3 class="text-2xl font-semibold text-center text-[#11285B] mb-4">Commercial</h3>
+                    <p class="text-center text-gray-500 mb-4">Lorem ipsum dolor sit amet consectetur adipisicing elit. Odit harum hic veniam eligendi minima Lorem ipsum dolor sit amet consectetur adipisicing elit. Odit harum hic veniam eligendi minima</p>
+                    <div class="flex justify-center">
+                        <button class="px-3 py-2 mb-4 bg-[#1A2A58] text-white rounded-md shadow-md hover:bg-[#F3C623] transition">Learn More</button>
+                    </div>
+                    <img src="images/Service-4.jpg" alt="Import" class="rounded-xl ">
+                </div>
+
+                <!-- كرت 4 -->
+                <div class="w-1/4 min-w-[25%] bg-white px-6 py-12 m-1 rounded-lg shadow-md transition-transform hover:scale-95">
+                    <h3 class="text-2xl font-semibold text-center text-[#11285B] mb-4">Design</h3>
+                    <p class="text-center text-gray-500 mb-4">Lorem ipsum dolor sit amet consectetur adipisicing elit. Odit harum hic veniam eligendi minima Lorem ipsum dolor sit amet consectetur adipisicing elit. Odit harum hic veniam eligendi minima</p>
+                    <div class="flex justify-center">
+                        <button class="px-3 py-2 mb-4 bg-[#1A2A58] text-white rounded-md shadow-md hover:bg-[#F3C623] transition">Learn More</button>
+                    </div>
+                    <img src="images/service-5.jpg" alt="Import" class="rounded-xl ">
+                </div>
+
+                <!-- كرت 5 -->
+                <div class="w-1/4 min-w-[25%] bg-white px-6 py-12 m-1 rounded-lg shadow-md transition-transform hover:scale-95">
+                    <h3 class="text-2xl font-semibold text-center text-[#11285B] mb-4">Sales</h3>
+                    <p class="text-center text-gray-500 mb-4">Lorem ipsum dolor sit amet consectetur adipisicing elit. Odit harum hic veniam eligendi minima Lorem ipsum dolor sit amet consectetur adipisicing elit. Odit harum hic veniam eligendi minima</p>
+                    <div class="flex justify-center">
+                        <button class="px-3 py-2 mb-4 bg-[#1A2A58] text-white rounded-md shadow-md hover:bg-[#F3C623] transition">Learn More</button>
+                    </div>
+                    <img src="images/service-6.jpg" alt="Import" class="rounded-xl ">
+                </div>
+
+                <!-- كرت 6 -->
+                <div class="w-1/4 min-w-[25%] bg-white px-6 py-12 m-1 rounded-lg shadow-md transition-transform hover:scale-95">
+                    <h3 class="text-2xl font-semibold text-center text-[#11285B] mb-4">To Implement</h3>
+                    <p class="text-center text-gray-500 mb-4">Lorem ipsum dolor sit amet consectetur adipisicing elit. Odit harum hic veniam eligendi minima Lorem ipsum dolor sit amet consectetur adipisicing elit. Odit harum hic veniam eligendi minima</p>
+                    <div class="flex justify-center">
+                        <button class="px-3 py-2 mb-4 bg-[#1A2A58] text-white rounded-md shadow-md hover:bg-[#F3C623] transition">Learn More</button>
+                    </div>
+                    <img src="images/Service-2.jpg" alt="Import" class="rounded-xl ">
+                </div>
+
+                <!-- كرت 7 -->
+                 <div></div>
+
+
+
+            </div>
+        </div>
+    
+        <!-- أزرار التحكم تحت الكروت -->
+        <div class="flex justify-between gap-4 mt-8">
+            <button id="prev" class="bg-[#11285b] text-white py-2 px-4 rounded-full shadow-md duration-300 hover:bg-[#F3C623]"><i class="fa-solid fa-angle-left"></i></button>
+            <button id="next" class="bg-[#11285b] text-white py-2 px-4 rounded-full shadow-md duration-300 hover:bg-[#F3C623]"><i class="fa-solid fa-angle-right"></i></button>
+        </div>
+    </section>
+    
+    
+
+    <!-- Request Services -->
+    <section class=" mx-auto py-16">
+        <div class="relative h-96 overflow-hidden">
+            <img src="images/Services Request.jpg" alt="banner" class="height w-full object-cover">
+            <div class="absolute inset-0 bg-black bg-opacity-50"></div>
+            <div class="absolute inset-0 flex flex-col items-center justify-center text-white text-center p-2">
+                <h2 class="text-2xl font-bold">We Provid the best</h2>
+                <h3 class="text-4xl font-bold mt-2">Manufacturing consulting</h3>
+                <p class="mt-4 max-w-2xl">The company provides special consulting services in manufacturing services, design services, and implementation of the latest decorations</p>
+                <div class="mt-6 flex gap-4">
+                    <button class="bg-[#11285B] text-white px-6 py-2 rounded-md text-lg font-semibold duration-300 hover:bg-[#F3C623]">You can request the service now</button>
+                    <button class="bg-white text-[#11285B] px-6 py-2 rounded-md text-lg font-semibold hover-button-contact-now">Contact Now</button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- TimeLine Section -->
+    <section class=" mx-auto py-16 px-8">
+        <h2 class="text-4xl font-bold text-[#11285B] flex justify-center mb-20">We Follow These Steps</h2>
+        <div class="relative flex justify-center items-center">
+            <!-- النقاط الزرقاء كزينة -->
+            <div class="absolute top-10 left-20">
+                <img src="images/dots.png" alt="dots" class="w-60 h-60">
+            </div>
+            <div class="absolute bottom-10 right-20">
+                <img src="images/dots.png" alt="dots" class="w-60 h-60">
+            </div>
+            
+            <!-- الخط الزمني -->
+            <div class="relative flex flex-col items-center">
+                <div class="w-1 bg-[#11285B] absolute left-1/2 transform -translate-x-1/2 top-6 bottom-6 z-0"></div>
+                
+                <!-- عناصر التايم لاين -->
+                <div class="flex items-center mb-10 w-full relative">
+                    <div class="w-1/2 flex justify-end pr-4">
+                        <span class=" text-[#11285B] text-2xl font-medium justify-center items-center px-2 rounded-l-full ">import</span>
+                    </div>
+                    <div class="w-6 h-6 bg-yellow-500 border-4 border-[#11285B] rounded-full absolute left-1/2 transform -translate-x-1/2 z-10"></div>
+                    <div class="w-1/2"></div>
+                </div>
+                <div class="flex items-center mb-10 w-full relative">
+                    <div class="w-1/2"></div>
+                    <div class="w-6 h-6 bg-yellow-500 border-4 border-[#11285B] rounded-full absolute left-1/2 transform -translate-x-1/2 z-10"></div>
+                    <div class="w-1/2 flex justify-start pl-4">
+                        <span class="text-[#11285B] text-2xl font-medium justify-center items-center px-2 rounded-r-full">manufacturing</span>
+                    </div>
+                </div>
+                <div class="flex items-center mb-10 w-full relative">
+                    <div class="w-1/2 flex justify-end pr-4">
+                        <span class="text-[#11285B] text-2xl font-medium justify-center items-center px-2  rounded-l-full">commercial</span>
+                    </div>
+                    <div class="w-6 h-6 border-4 border-[#11285B] rounded-full absolute left-1/2 transform -translate-x-1/2 z-10 flex items-center justify-center bg-white">
+                        <div class="w-4 h-4 bg-yellow-500 rounded-full animate-pulse"></div>
+                    </div>
+                    <div class="w-1/2"></div>
+                </div>
+                <div class="flex items-center mb-10 w-full relative">
+                    <div class="w-1/2"></div>
+                    <div class="w-6 h-6 border-4 border-[#11285B] rounded-full bg-white absolute left-1/2 transform -translate-x-1/2 z-10"></div>
+                    <div class="w-1/2 flex justify-start pl-4">
+                        <span class="text-[#11285B] text-2xl font-medium justify-center items-center px-2 rounded-r-full">Sales</span>
+                    </div>
+                </div>
+                <div class="flex items-center mb-10 w-full relative">
+                    <div class="w-1/2 flex justify-end pr-4">
+                        <span class="text-[#11285B] text-2xl font-medium justify-center items-center px-2 rounded-l-full">Contracts</span>
+                    </div>
+                    <div class="w-6 h-6 border-4 border-[#11285B] rounded-full bg-white absolute left-1/2 transform -translate-x-1/2 z-10"></div>
+                    <div class="w-1/2"></div>
+                </div>
+                <div class="flex items-center w-full relative">
+                    <div class="w-1/2"></div>
+                    <div class="w-6 h-6 border-4 border-[#11285B] rounded-full bg-white absolute left-1/2 transform -translate-x-1/2 z-10"></div>
+                    <div class="w-1/2 flex justify-start pl-4">
+                        <span class="text-[#11285B] text-2xl font-medium justify-center items-center px-2 rounded-r-full">Implementation</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <!-- Our Projects -->
+    <section class=" mx-auto py-16 px-8 mt-10 bg-gray-50">
+        <h2 class="text-4xl font-semibold text-[#11285B] flex justify-center mb-20">Our Projects</h2>
+        <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4">
+            <!-- Project 1 -->
+            <div class="bg-gray-50 shadow-lg py-10 px-8 scale-95 rounded-md transition-transform hover:scale-100 hover:bg-white">
+                <h2 class="text-[#11285B] text-2xl font-bold mb-4">Albatros Citadel</h2>
+                <p class="text-gray-500 mb-4">Lorem ipsum dolor sit amet consectetur adipisicing elit. Odit harum hic veniam eligendi minima</p>
+                <div class="flex items-center gap-2 mb-4">
+                    <h3 class="text-lg font-medium text-[#11285B]">See More</h3>
+                    <i class="fa-solid fa-arrow-right cursor-pointer"></i>
+                </div>
+                <div>
+                    <img src="images/Project-1.jpg" alt="Project 1" class="w-full h-40 object-cover rounded-md ">
+                </div>
+            </div>
+
+            <!-- Project 2 -->
+            <div class="bg-gray-50 shadow-lg py-10 px-8 scale-95 rounded-md transition-transform hover:scale-100 hover:bg-white">
+                <h2 class="text-[#11285B] text-2xl font-bold mb-4">Albatros Citadel</h2>
+                <p class="text-gray-500 mb-4">Lorem ipsum dolor sit amet consectetur adipisicing elit. Odit harum hic veniam eligendi minima</p>
+                <div class="flex items-center gap-2 mb-4">
+                    <h3 class="text-lg font-medium text-[#11285B]">See More</h3>
+                    <i class="fa-solid fa-arrow-right cursor-pointer"></i>
+                </div>
+                <div>
+                    <img src="images/project-2.jpg" alt="Project 1" class="w-full h-40 object-cover rounded-md ">
+                </div>
+            </div>
+
+            <!-- Project 3 -->
+            <div class="bg-gray-50 shadow-lg py-10 px-8 scale-95 rounded-md transition-transform hover:scale-100 hover:bg-white">
+                <h2 class="text-[#11285B] text-2xl font-bold mb-4">Albatros Citadel</h2>
+                <p class="text-gray-500 mb-4">Lorem ipsum dolor sit amet consectetur adipisicing elit. Odit harum hic veniam eligendi minima</p>
+                <div class="flex items-center gap-2 mb-4">
+                    <h3 class="text-lg font-medium text-[#11285B]">See More</h3>
+                    <i class="fa-solid fa-arrow-right cursor-pointer"></i>
+                </div>
+                <div>
+                    <img src="images/project-3.jpg" alt="Project 1" class="w-full h-40 object-cover rounded-md ">
+                </div>
+            </div>
+
+            <!-- Project 4 -->
+            <div class="bg-gray-50 shadow-lg py-10 px-8 scale-95 rounded-md transition-transform hover:scale-100 hover:bg-white">
+                <h2 class="text-[#11285B] text-2xl font-bold mb-4">Albatros Citadel</h2>
+                <p class="text-gray-500 mb-4">Lorem ipsum dolor sit amet consectetur adipisicing elit. Odit harum hic veniam eligendi minima</p>
+                <div class="flex items-center gap-2 mb-4">
+                    <h3 class="text-lg font-medium text-[#11285B]">See More</h3>
+                    <i class="fa-solid fa-arrow-right cursor-pointer"></i>
+                </div>
+                <div>
+                    <img src="images/project-4.jpg" alt="Project 1" class="w-full h-40 object-cover rounded-md ">
+                </div>
+            </div>
+
+            <!-- Project 5 -->
+            <div class="bg-gray-50 shadow-lg py-10 px-8 scale-95 rounded-md transition-transform hover:scale-100 hover:bg-white">
+                <h2 class="text-[#11285B] text-2xl font-bold mb-4">Albatros Citadel</h2>
+                <p class="text-gray-500 mb-4">Lorem ipsum dolor sit amet consectetur adipisicing elit. Odit harum hic veniam eligendi minima</p>
+                <div class="flex items-center gap-2 mb-4">
+                    <h3 class="text-lg font-medium text-[#11285B]">See More</h3>
+                    <i class="fa-solid fa-arrow-right cursor-pointer"></i>
+                </div>
+                <div>
+                    <img src="images/project-5.jpg" alt="Project 1" class="w-full h-40 object-cover rounded-md ">
+                </div>
+            </div>
+
+            <!-- Project 6 -->
+            <div class="bg-gray-50 shadow-lg py-10 px-8 scale-95 rounded-md transition-transform hover:scale-100 hover:bg-white">
+                <h2 class="text-[#11285B] text-2xl font-bold mb-4">Albatros Citadel</h2>
+                <p class="text-gray-500 mb-4">Lorem ipsum dolor sit amet consectetur adipisicing elit. Odit harum hic veniam eligendi minima</p>
+                <div class="flex items-center gap-2 mb-4">
+                    <h3 class="text-lg font-medium text-[#11285B]">See More</h3>
+                    <i class="fa-solid fa-arrow-right cursor-pointer"></i>
+                </div>
+                <div>
+                    <img src="images/project-6.jpg" alt="Project 1" class="w-full h-40 object-cover rounded-md ">
+                </div>
+            </div>
+
+            <!-- Project 7 -->
+            <div class="bg-gray-50 shadow-lg py-10 px-8 scale-95 rounded-md transition-transform hover:scale-100 hover:bg-white">
+                <h2 class="text-[#11285B] text-2xl font-bold mb-4">Albatros Citadel</h2>
+                <p class="text-gray-500 mb-4">Lorem ipsum dolor sit amet consectetur adipisicing elit. Odit harum hic veniam eligendi minima</p>
+                <div class="flex items-center gap-2 mb-4">
+                    <h3 class="text-lg font-medium text-[#11285B]">See More</h3>
+                    <i class="fa-solid fa-arrow-right cursor-pointer"></i>
+                </div>
+                <div>
+                    <img src="images/project-7.jpg" alt="Project 1" class="w-full h-40 object-cover rounded-md ">
+                </div>
+            </div>
+
+            <!-- Project 8 -->
+            <div class="bg-gray-50 shadow-lg py-10 px-8 scale-95 rounded-md transition-transform hover:scale-100 hover:bg-white">
+                <h2 class="text-[#11285B] text-2xl font-bold mb-4">Albatros Citadel</h2>
+                <p class="text-gray-500 mb-4">Lorem ipsum dolor sit amet consectetur adipisicing elit. Odit harum hic veniam eligendi minima</p>
+                <div class="flex items-center gap-2 mb-4">
+                    <h3 class="text-lg font-medium text-[#11285B]">See More</h3>
+                    <i class="fa-solid fa-arrow-right cursor-pointer"></i>
+                </div>
+                <div>
+                    <img src="images/Project-1.jpg" alt="Project 1" class="w-full h-40 object-cover rounded-md ">
+                </div>
+            </div>
+        </div>
+        <div>
+            <div class="flex justify-center mt-20">
+                <button class="flex items-center gap-4 text-white font-medium  bg-[#11285B] px-4 py-2 rounded-xl shadow-md duration-300 hover:bg-[#F3C623]">
+                    More 
+                    <i class="fa-solid fa-arrow-right"></i>
+                </button>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Us -->
+    <section class=" mx-auto py-16 px-8 mt-10">
+        <h2 class="flex justify-center text-[#11285B] text-4xl font-bold mb-4">About Us</h2>
+        <div class="flex items-center justify-between px-16 py-20">
+            <!-- الجزء الخاص بالصور -->
+            <div class="relative w-1/2">
+                <img src="images/about-1.jpg" alt="Main Image" class="rounded-3xl w-full h-auto">
+            </div>
+            
+            <!-- الجزء الخاص بالنص -->
+            <div class="w-1/2 pl-12">
+                <h2 class="text-2xl font-semibold text-[#11285B] mb-2">Our History</h2>
+                <p class="text-gray-600 mb-6">
+                    Al Badr Company was established in 2012 as a joint venture company specialized in suspended ceilings and finishing at a time when the field was in its early stages and helped create a huge boom. The population's need for the rapidly increasing demand for the field had to be met through housing, commercial and educational facilities, medical centers and hospitals. Traditional construction methods had become slow, labor-intensive and impractical in many cases. It was time to look to the future of construction through fast-implementing suspended ceilings.
+                </p>
+                <button class="bg-[#11285B] text-white px-6 py-1 rounded-lg flex items-center gap-2 hover:bg-[#F3C623] transition">
+                    More <span class="text-lg">→</span>
+                </button>
+            </div>
+        </div>
+        
+    </section>
+
+    <!-- We Agent -->
+    <section class="bg-gray-100 py-16">
+        <div class="container mx-auto px-6">
+            <h2 class="text-center text-3xl font-bold text-blue-900 mb-10">We Agent</h2>
+            <div class="flex flex-col md:flex-row justify-between items-center bg-white shadow-lg rounded-lg p-8">
+                <div class="w-full md:w-1/2 space-y-6">
+                    <div class="flex items-center space-x-4">
+                        <p class="text-[#11285B] font-semibold">Agent of the German company Knauf</p>
+                        <img src="images/kauf.jfif" alt="Knauf" class="w-20 h-auto rounded-lg shadow">
+                    </div>
+                    <div class="flex items-center space-x-4">
+                        <p class="text-[#11285B] font-semibold">Agent of Ecobat Industrial Development Company (G Board)</p>
+                        <img src="images/ecobat.png" alt="Ecobat" class="w-20 h-auto rounded-lg shadow">
+                    </div>
+                    <div class="flex items-center space-x-4">
+                        <p class="text-[#11285B] font-semibold">Agent Of Marmox Egypt Company (Marmox Board Pro)</p>
+                        <img src="images/marmox.png" alt="Marmox" class="w-20 h-auto rounded-lg shadow">
+                    </div>
+                </div>
+                <div class="w-full md:w-1/2 space-y-6 mt-6 md:mt-0">
+                    <div class="flex items-center space-x-4">
+                        <p class="text-[#11285B] font-semibold">Agent of Nail HD</p>
+                        <img src="images/ecobat.png" alt="Nail HD" class="w-20 h-auto rounded-lg shadow">
+                    </div>
+                    <div class="flex items-center space-x-4">
+                        <p class="text-[#11285B] font-semibold">Agent of San Juan Jebrock</p>
+                        <img src="images/marmox.png" alt="Gyproc" class="w-20 h-auto rounded-lg shadow">
+                    </div>
+                    <div class="flex items-center space-x-4">
+                        <p class="text-[#11285B] font-semibold">Agent of San Juan Jebrock</p>
+                        <img src="images/ecobat.png" alt="Gyproc" class="w-20 h-auto rounded-lg shadow">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Us -->
+    <section class="flex items-center justify-center py-32 px-16 mt-44 h-96" style="background-image: url(images/contact\ us.jfif); background-size: cover; 
+    background-position: center;">
+        <div class="container flex justify-center items-center gap-96">
+          <!-- Contact Form -->
+          <div class="bg-[#11285B] py-16 px-8 rounded-xl shadow-lg text-white w-full md:w-1/3">
+            <h2 class="text-xl font-bold text-center mb-3">For inquiries ?</h2>
+            <p class="text-center mb-6">Feel free to contact us</p>
+            <form>
+              <div class="grid grid-cols-2 gap-4">
+                <input type="text" placeholder="First Name" class="p-2 bg-white text-black rounded w-full" />
+                <input type="text" placeholder="First Name" class="p-2 bg-white text-black rounded w-full" />
+              </div>
+              <input type="email" placeholder="Enter Your Email" class="p-2 bg-white text-black rounded w-full mt-4" />
+              <div class="grid grid-cols-2 gap-4 mt-4">
+                <input type="text" placeholder="Phone Number" class="p-2 bg-white text-black rounded w-full" />
+                <select class="p-2 bg-white text-[#11285B] rounded w-full">
+                  <option>Section</option>
+                  <option>Import</option>
+                  <option>Manufacturing</option>
+                  <option>commercial</option>
+                  <option>sales</option>
+                  <option>Contractors</option>
+                  <option>to implement</option>
+                </select>
+              </div>
+              <textarea placeholder="Your Message..." class="p-2 bg-white text-[#11285B] rounded w-full h-40 mt-4 resize-none"></textarea>
+              <button class="bg-yellow-400 text-white px-4 py-2 rounded w-full mt-4 hover:bg-yellow-500">Send</button>
+            </form>
+          </div>
+          
+          <!-- Business Statistics -->
+          <div class="md:w-1/3">
+            <h2 class="text-2xl text-white font-bold text-center mb-10">Business Statistics</h2>
+            <div class="flex justify-center items-center gap-8">
+                <div class="bg-white py-3 px-6 rounded-xl shadow-lg">
+                    <i class="fa-solid fa-user text-2xl text-center justify-center flex text-[#11285B]"></i>
+                    <p class="text-2xl text-center font-semibold justify-center flex text-[#11285B]">+999</p>
+                    <p class="text-2xl text-center font-semibold justify-center flex text-[#11285B]">Clients</p>
+                </div>
+
+                <div class="bg-white py-3 px-6 rounded-xl shadow-lg">
+                    <i class="fa-solid fa-store text-2xl text-center justify-center flex text-[#11285B]"></i>
+                    <p class="text-2xl text-center font-semibold justify-center flex text-[#11285B]">+6</p>
+                    <p class="text-2xl text-center font-semibold justify-center flex text-[#11285B]">Branches</p>
+                </div>
+
+                <div class="bg-white py-3 px-6 rounded-xl shadow-lg">
+                    <i class="fa-solid fa-earth-asia text-2xl text-center justify-center flex text-[#11285B]"></i>
+                    <p class="text-2xl text-center font-semibold justify-center flex text-[#11285B]">+999</p>
+                    <p class="text-2xl text-center font-semibold justify-center flex text-[#11285B]">Projects</p>
+                </div>
+            </div>
+
+            <p class="py-2 px-2 flex justify-center items-center mt-10 text-xl font-bold text-white">Quality only happens when you care enough to do your best</p>
+          </div>
+        </div>
+    </section>
+
+
+
+
+
+    <!-- Footer -->
+    <footer class="bg-[#11285B] text-white mt-44 py-8">
+        <div class=" mx-auto grid grid-cols-1 md:grid-cols-5 gap-8 px-5">
+            <!-- Company Info -->
+            <div class="col-span-2">
+                <h2 class="text-lg font-bold">Elbadr Group</h2>
+                <p class="text-sm mt-2">Al-Badr Suspended Ceilings Company has the results of years of experience in the field at all levels in implementing projects and manufacturing all sectors. It has many individuals, which makes the company around you wherever you are, due to the ease of finding what you need.</p>
+                <a href="about.html" class="text-white font-bold mt-4 inline-block">Read More →</a>
+                <div class="flex gap-4 mt-4">
+                    <a href="#" class="text-white text-2xl duration-300 hover:text-blue-500"><i class="fa-brands fa-facebook-f"></i></a>
+                    <a href="#" class="text-white text-2xl duration-300 hover:text-orange-500"><i class="fab fa-instagram"></i></a>
+                    <a href="#" class="text-white text-2xl duration-300 hover:text-blue-500"><i class="fab fa-twitter"></i></a>
+                    <a href="#" class="text-white text-2xl duration-300 hover:text-red-500"><i class="fab fa-youtube"></i></a>
+                    <a href="#" class="text-white text-2xl duration-300 hover:text-blue-500"><i class="fab fa-linkedin"></i></a>
+                </div>
+            </div>
+            
+            <!-- Services -->
+            <div>
+                <h2 class="text-lg font-bold">Services</h2>
+                <ul class="text-gray-400 cursor-pointer">
+                    <li class="duration-300 hover:text-[#F3C623] transition hover:scale-105">Import</li>
+                    <li class="duration-300 hover:text-[#F3C623] transition hover:scale-105">Manufacturing</li>
+                    <li class="duration-300 hover:text-[#F3C623] transition hover:scale-105">Commercial</li>
+                    <li class="duration-300 hover:text-[#F3C623] transition hover:scale-105">Sales</li>
+                    <li class="duration-300 hover:text-[#F3C623] transition hover:scale-105">Contracts</li>
+                    <li class="duration-300 hover:text-[#F3C623] transition hover:scale-105">Implementation</li>
+                </ul>
+            </div>
+            
+            <!-- Content -->
+            <div>
+                <h2 class="text-lg font-bold">Content</h2>
+                <ul class="text-gray-400 cursor-pointer">
+                    <li class="duration-300 hover:text-[#F3C623] transition hover:scale-105">Home</li>
+                    <li class="duration-300 hover:text-[#F3C623] transition hover:scale-105">Services</li>
+                    <li class="duration-300 hover:text-[#F3C623] transition hover:scale-105">Projects</li>
+                    <li class="duration-300 hover:text-[#F3C623] transition hover:scale-105">About Us</li>
+                    <li class="duration-300 hover:text-[#F3C623] transition hover:scale-105">Contact Us</li>
+                </ul>
+            </div>
+            
+            <!-- Contact Info -->
+            <div>
+                <h2 class="text-lg font-bold">Branches</h2>
+                <ul class="text-gray-400 cursor-pointer">
+                    <li class="duration-300 hover:text-[#F3C623] transition hover:scale-105">Cairo</li>
+                    <li class="duration-300 hover:text-[#F3C623] transition hover:scale-105">Red Sea</li>
+                    <li class="duration-300 hover:text-[#F3C623] transition hover:scale-105">Kafr El-Sheikh</li>
+                    <li class="duration-300 hover:text-[#F3C623] transition hover:scale-105">Alamein</li>
+                </ul>
+            </div>
+        </div>
+
+        
+        <div class="border-t border-white mt-6 py-4 px-5 flex flex-col md:flex-row justify-between text-sm text-center md:text-left">
+            <p>Copyright 2025 | Elbadr Group</p>
+            <p class="font-bold">Made With Love by Ahmedhelmy</p>
+            <div class="flex gap-6">
+                <p class="hover:underline ">Terms</p>
+                <p class="hover:underline ">Privacy</p>
+                <p class="hover:underline ">Compliances</p>
+            </div>
+        </div>
+    </footer>
+    
+    
+    
+
+    
+
+
+
+    <!-- js link -->
+    <script src="js/main.js"></script>
+</html>
+</body>
+</html>

@@ -1,0 +1,107 @@
+::-webkit-scrollbar {
+    width: 12px;
+}
+
+::-webkit-scrollbar-track {
+    background: #f1f1f1;
+    border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb {
+    background: #11285B;
+    border-radius: 2px;
+    transition: background 0.3s ease-in-out;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: #F3C623;
+}
+
+/* Scrollbar */
+@media (max-width: 768px) {
+    ::-webkit-scrollbar {
+        display: none;
+    }
+}
+
+
+
+
+/* expiriance */
+
+
+
+/* For Animation Hero Banner */
+.floating-image {
+    animation: floating-image 2s ease-in-out infinite;
+}
+
+@keyframes floating-image {
+    0% {
+        transform: translateY(0);
+    }
+    50% {
+        transform: translateY(20px);
+    }
+    100% {
+        transform: translateY(0);
+    }
+}
+
+
+
+/* Arrow Services Section  */
+.left-arrow {
+    padding-top: 8px;
+    padding-bottom: 8px;
+    padding-left: 16px;
+    padding-right: 16px;
+    color: #11285B;
+    border: 1px solid #11285B;
+    border-radius: 50%;
+    transition: 0.2s ease-in-out;
+}
+
+.left-arrow:hover {
+    background-color: #F3C623;
+    color: white;
+}
+
+.right-arrow {
+    padding-top: 8px;
+    padding-bottom: 8px;
+    padding-left: 16px;
+    padding-right: 16px;
+    background-color: #11285B;
+    color: white;
+    border-radius: 50%;
+    transition: 0.2s ease-in-out;
+}
+
+.right-arrow:hover {
+    background-color: #F3C623;
+    color: white;
+}
+
+
+.height {
+    height: 500px;
+    overflow: auto;
+}
+
+
+
+/* Request Services */
+.hover-button-contact-now {
+    background-color: white;
+    color: #11285B;
+    transition: 0.2s ease-in-out;
+}
+
+.hover-button-contact-now:hover {
+    background-color: #F3C623;
+    color: white;
+}
+
+
+

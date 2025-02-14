@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Al-badr Company</title>
+    <link rel="stylesheet" href="css/all.min.css">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/normalize.css">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <!-- Google Font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="">
+    <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@200..1000&amp;display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.css"/>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.js"></script>
+
+</head>
+<body>
+    <!-- Navbar -->
+    <nav class="flex justify-between items-center py-4 px-8 bg-white shadow-md">
+            <!-- Logo -->
+            <div class="flex items-center">
+                <img src="images/Logo Al Badr 4.png" alt="Logo" class="w-16">
+            </div>
+    
+            <!-- Links -->
+            <ul class="flex space-x-6 text-lg font-semibold text-[#1A2A58] relative items-center">
+                <li><a href="index.html" class="duration-200 hover:text-yellow-500">Home</a></li>
+    
+                <!-- Dropdown Container -->
+                <li class="relative">
+                    <button id="dropdownButton" class="flex items-center space-x-1 duration-200 hover:text-yellow-500">
+                        <span>Service</span>
+                        <i class="fa-solid fa-chevron-down text-sm"></i>
+                    </button>
+    
+                    <!-- Dropdown Menu --> 
+                    <div id="dropdownMenu" class="absolute left-0 top-10 w-[800px] bg-white shadow-lg p-6 rounded-lg mt-6  hidden z-10">
+                        <!-- Column 1 -->
+                        <div class="w-1/2 p-4 space-y-6">
+                            <div class="flex items-center space-x-3 justify-between cursor-pointer">
+                                <h3 class="font-bold text-lg text-transform: capitalize">import</h3>
+                                <i class="fa-solid fa-tools text-[#1A2A58] text-xl "></i>
+                            </div>
+                            <p class="text-gray-600 text-sm">Professional interior and exterior painting services</p>
+    
+                            <div class="flex items-center space-x-3 justify-between cursor-pointer">
+                                <h3 class="font-bold text-lg text-transform: capitalize">Commercial</h3>
+                                <i class="fa-solid fa-building text-[#1A2A58] text-xl"></i>
+                            </div>
+                            <p class="text-gray-600 text-sm">Innovative architectural solutions for modern </p>
+    
+                            <div class="flex items-center space-x-3 justify-between cursor-pointer">
+                                <h3 class="font-bold text-lg text-transform: capitalize">Contractors</h3>
+                                <i class="fa-solid fa-hammer text-[#1A2A58] text-xl"></i>
+                            </div>
+                            <p class="text-gray-600 text-sm">Complete home and office renovation services.</p>
+                        </div>
+    
+                        <!-- Column 2 -->
+                        <div class="w-1/2 p-4 space-y-6"> 
+                            <div class="flex items-center space-x-3 justify-between cursor-pointer">
+                                <h3 class="font-bold text-lg text-transform: capitalize">Manufacturing</h3>
+                                <i class="fa-solid fa-paint-roller text-[#1A2A58] text-xl"></i>
+                            </div>
+                            <p class="text-gray-600 text-sm">Professional interior and exterior painting services.</p>
+    
+                            <div class="flex items-center space-x-3 justify-between cursor-pointer">
+                                <h3 class="font-bold text-lg text-transform: capitalize">Sales</h3>
+                                <i class="fa-solid fa-ruler-combined text-[#1A2A58] text-xl"></i>
+                            </div>
+                            <p class="text-gray-600 text-sm">Creative and stylish interior design solutions.</p>
+    
+                            <div class="flex items-center space-x-3 justify-between cursor-pointer">
+                                <h3 class="font-bold text-lg text-transform: capitalize">To Implement</h3>
+                                <i class="fa-solid fa-truck text-[#1A2A58] text-xl"></i>
+                            </div>
+                            <p class="text-gray-600 text-sm">Reliable transportation and logistics services.</p>
+                        </div>
+                    </div>
+                </li>
+    
+                <li><a href="projects.html" class="duration-200 hover:text-yellow-500">Projects</a></li>
+                <li><a href="about.html" class="text-[#FFC72C]">About Us</a></li> 
+                <button href="#" class="duration-200 bg-[#1A2A58] text-white px-5 py-2 rounded-lg shadow-md hover:bg-yellow-500">
+                    Contact Us
+                </button>
+            </ul>
+
+             <!-- JavaScript for Toggle -->
+            <script>
+            document.getElementById("dropdownButton").addEventListener("click", function() {
+              let menu = document.getElementById("dropdownMenu");
+              if (menu.classList.contains("hidden")) {
+                menu.classList.remove("hidden");
+                menu.classList.add("flex");
+              } else {
+                menu.classList.remove("flex");
+                menu.classList.add("hidden");
+              }
+            });
+    
+            // إغلاق القائمة عند النقر خارجها
+            document.addEventListener("click", function(event) {
+                var dropdownMenu = document.getElementById("dropdownMenu");
+                if (!dropdownMenu.contains(event.target) && !document.getElementById("dropdownButton").contains(event.target)) {
+                    dropdownMenu.classList.add("hidden");
+                }
+            });
+            </script>
+    
+            <!-- Right Section -->
+            <div class="flex items-center space-x-6 relative">
+
+                <!-- Social Media Icons -->
+                <div class="flex text-xl gap-1 space-x-3 text-[#1A2A58]">
+                    <a href="#"><i class="fa-brands fa-whatsapp duration-200 hover:text-green-500 rounded-sm "></i></a>
+                    <a href="#"><i class="fa-brands fa-facebook-f duration-200 hover:text-blue-500 rounded-sm "></i></a>
+                    <a href="#"><i class="fa-brands fa-youtube duration-200 hover:text-red-500 rounded-sm "></i></a>
+                    <a href="#"><i class="fa-brands fa-instagram duration-200 hover:text-orange-500 rounded-sm "></i></a>
+                    <a href="#"><i class="fa-brands fa-twitter duration-200 hover:text-blue-500 rounded-sm "></i></a>
+                    <a href="#"><i class="fa-brands fa-linkedin-in duration-200 hover:text-blue-500 rounded-sm "></i></a>
+                </div>
+                <!-- Language Dropdown -->
+                <div class="relative">
+                    <button id="langButton" class="flex items-center space-x-2 border px-4 py-2 rounded-lg bg-white shadow-md">
+                        <img id="currentLangFlag" src="flags/usa.png.png" alt="Language" class="w-5 h-5">
+                        <span id="currentLangText">English</span>
+                        <i class="fa-solid fa-chevron-down text-sm"></i>
+                    </button>
+    
+                    <!-- Language Menu -->
+                    <div id="langMenu" class="absolute left-0 mt-2 w-[160px] bg-white shadow-lg rounded-lg hidden z-10">
+                        <ul>
+                            <li class="flex items-center space-x-2 px-4 py-2 cursor-pointer duration-200 hover:bg-gray-200" onclick="changeLanguage('Arabic', 'flags/egypt.png.png')">
+                                <img src="flags/egypt.png.png" alt="Arabic" class="w-4 h-4">
+                                <span>Arabic</span>
+                            </li>
+                            <li class="flex items-center space-x-2 px-4 py-2 cursor-pointer duration-200 hover:bg-gray-200" onclick="changeLanguage('Chinese', 'flags/china.png.png')">
+                                <img src="flags/china.png.png" alt="Chinese" class="w-4 h-4">
+                                <span>Chinese</span>
+                            </li>
+                            <li class="flex items-center space-x-2 px-4 py-2 cursor-pointer duration-200 hover:bg-gray-200" onclick="changeLanguage('English', 'flags/usa.png.png')">
+                                <img src="flags/usa.png.png" alt="English" class="w-4 h-4">
+                                <span>English</span>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+    
+            </div>
+
+             <!-- JavaScript for Dropdown -->
+             <script>
+            // Toggle language dropdown
+            document.getElementById("langButton").addEventListener("click", function(event) {
+                event.stopPropagation(); // منع إغلاق القائمة عند الضغط على الزر
+                document.getElementById("langMenu").classList.toggle("hidden");
+            });
+    
+            // تغيير اللغة عند الضغط على أي خيار
+            function changeLanguage(lang, flag) {
+                document.getElementById("currentLangText").innerText = lang;
+                document.getElementById("currentLangFlag").src = flag;
+                document.getElementById("langMenu").classList.add("hidden");
+            }
+    
+            // إغلاق القائمة عند النقر خارجها
+            document.addEventListener("click", function(event) {
+                var langMenu = document.getElementById("langMenu");
+                if (!langMenu.contains(event.target) && !document.getElementById("langButton").contains(event.target)) {
+                    langMenu.classList.add("hidden");
+                }
+            });
+            </script>
+
+    </nav>
+
+    <!-- banner Section -->
+    <section class="relative w-full h-[500px] flex items-center justify-center" 
+         style="background-image: url('images/aboutus-banner.jpg'); background-size: cover; background-position: center;">
+          <div class="absolute inset-0 bg-black bg-opacity-50"></div>
+          <div class="relative text-center text-white">
+             <h1 class="text-5xl font-bold">Projects</h1>
+                 <div class="mt-4">
+                   <a href="#projects" class="inline-block text-white text-4xl mt-40 animate-bounce">
+                    <i class="fa-solid fa-arrow-down"></i>
+                 </a>
+              </div>
+            </div>
+    </section>
+
+
+    
+
+
+
+
+
+
+    <!-- js link -->
+    <script src="js/projects.js"></script>
+</html>
+</body>
+</html>
